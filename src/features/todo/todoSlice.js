@@ -9,6 +9,7 @@ const initialState = {
 
 const todoSlice = createSlice({
     name: 'todos',
+    initialState,
     reducers: {
         addTodo : (state,action) => {
             const todo = {
@@ -23,8 +24,12 @@ const todoSlice = createSlice({
             state.todos = state.todos.filter((eachTodo)=> eachTodo.id !==action.payload)
         },
 
-        editTodo: (state,action)=>{
-            state.todos.map((eachTodo)=>eachTodo.id===action.payload?eachTodo.title = action.payload : eachTodo)
+        editTodo: (state, action) => {
+            const { id, newTitle } = action.payload;
+            const todoToEdit = state.todos.find(todo => todo.id === id);
+            if (todoToEdit) {
+                todoToEdit.title = newTitle;
+            }
         }
     }
 })
