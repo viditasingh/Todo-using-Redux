@@ -31,8 +31,8 @@ npm or yarn
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/redux-todo.git
-cd redux-todo
+git clone https://github.com/your-username/Todo-using-Redux.git
+cd Todo-using-Redux
 ``` 
 2. Install dependencies:
 ```bash
