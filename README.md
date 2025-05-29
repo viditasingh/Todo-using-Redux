@@ -2,6 +2,7 @@
 A modern, aesthetic todo application built with React, Redux, and Tailwind CSS.
 
 ## Redux Todo App Screenshot
+![screenshot](https://i.postimg.cc/HnsLhk3B/Screenshot-2025-05-29-205258.png)
 
 ## Features
 - Add and remove tasks with a clean, intuitive interface
