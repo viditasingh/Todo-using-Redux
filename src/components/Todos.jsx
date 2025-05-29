@@ -17,10 +17,11 @@ export default function Todos() {
           <ul className="space-y-3">
               {todos.map((eachTodo) => (
               <li
-                  className="flex justify-between items-center bg-slate-700 px-4 py-3 rounded-lg hover:bg-slate-600 transition-colors duration-200"
+                  className=" bg-slate-700 px-4 py-3 rounded-lg hover:bg-slate-600 transition-colors duration-200"
                   key={eachTodo.id}
               >
-                  <div className='text-white font-medium truncate mr-2'>{eachTodo.title}</div>
+                <div className='flex justify-between items-center'>
+                  <div className='text-white font-medium'>{eachTodo.title}</div>
                   <button
                   onClick={() => dispatch(removeTodo(eachTodo.id))}
                   className="text-white bg-red-500 p-2 rounded-full focus:outline-none hover:bg-red-600 transition-colors duration-200"
@@ -41,6 +42,7 @@ export default function Todos() {
                       />
                   </svg>
                   </button>
+                </div>
               </li>
               ))}
           </ul>
